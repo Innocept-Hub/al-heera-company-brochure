@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AL HEERA ALUMINIUM & GLASS - Company Profile Deck</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      margin: 0;
+      padding: 60px 0 40px 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0b0f17;
+      color: #1e293b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Fixed top toolbar */
+    .document-toolbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 52px;
+      background: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      z-index: 1000;
+      border-bottom: 1px solid #1e293b;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    .toolbar-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #eab308;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Strict A4 Portrait Dimensions (794px x 1123px = 210mm x 297mm at 96 DPI) */
+    .slide-container {
+      width: 794px;
+      height: 1123px;
+      min-width: 794px;
+      min-height: 1123px;
+      max-width: 794px;
+      max-height: 1123px;
+      margin: 24px auto;
+      padding: 48px 52px;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #ffffff;
+    }
+
+    .slide-container.dark-cover {
+      background-color: #0c131d;
+      color: #ffffff;
+    }
+
+    .slide-container.light-page {
+      background-color: #ffffff;
+      color: #0f172a;
+    }
+
+    /* Accent badges & containers */
+    .badge-gold {
+      background: #eab308;
+      color: #000000;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      padding: 5px 12px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .badge-gold-subtle {
+      background: rgba(234, 179, 8, 0.12);
+      color: #ca8a04;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .card-light {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+
+    .card-dark {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .footer-light {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-dark {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .print-btn {
+      background: #eab308;
+      color: #0f172a;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .print-btn:hover {
+      background: #facc15;
+    }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+      .document-toolbar {
+        display: none;
+      }
+      .slide-container {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        page-break-after: always;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP TOOLBAR -->
+  <div class="document-toolbar">
+    <div class="toolbar-title">
+      <i class="fa-solid fa-file-pdf"></i>
+      AL HEERA ALUMINIUM &amp; GLASS — COMPANY PROFILE (A4 PORTRAIT)
+    </div>
+    <div style="display:flex; align-items:center; gap:20px;">
+      <span style="font-size:12px; color:#94a3b8; font-weight:500;">12 Pages • Official Brochure Format</span>
+      <button class="print-btn" onclick="window.print()"><i class="fa-solid fa-print mr-1"></i> Save as PDF / Print</button>
+    </div>
+  </div>
+
+  <!-- SVG LOGO DEFINITIONS (REUSABLE INLINE SVG) -->
+  <svg style="display: none;">
+    <g id="al-heera-logo-light">
+      <g transform="translate(0, 0)">
+        <!-- Gold Crest Circle -->
+        <circle cx="42" cy="42" r="38" fill="none" stroke="#d97706" stroke-width="3" />
+        <circle cx="42" cy="42" r="35" fill="none" stroke="#eab308" stroke-width="1.5" stroke-dasharray="8 3" />
+        <!-- Building Glass Spires -->
+        <path d="M 28 48 L 28 32 L 38 22 L 38 48 Z" fill="none" stroke="#38bdf8" stroke-width="2" />
+        <path d="M 38 48 L 38 16 L 48 10 L 48 48 Z" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2" />
+        <path d="M 48 48 L 48 26 L 56 34 L 56 48 Z" fill="none" stroke="#38bdf8" stroke-width="2" />
+        <!-- Roof Arch -->
+        <path d="M 22 52 L 42 38 L 62 52" fill="none" stroke="#eab308" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Inner H Badge -->
+        <circle cx="42" cy="60" r="11" fill="#ffffff" stroke="#eab308" stroke-width="2" />
+        <text x="42" y="65" font-family="'Outfit', sans-serif" font-weight="900" font-size="13" fill="#d97706" text-anchor="middle">H</text>
+      </g>
+      <!-- Text Portion -->
+      <text x="95" y="44" font-family="'Outfit', sans-serif" font-weight="900" font-size="34" fill="#d97706" letter-spacing="1">AL HEERA</text>
+      <text x="96" y="66" font-family="'Outfit', sans-serif" font-weight="700" font-size="15" fill="#94a3b8" letter-spacing="3.5">ALUMINIUM &amp; GLASS</text>
+    </g>
+
+    <g id="al-heera-logo-dark">
+      <g transform="translate(0, 0)">
+        <circle cx="42" cy="42" r="38" fill="none" stroke="#eab308" stroke-width="3" />
+        <circle cx="42" cy="42" r="35" fill="none" stroke="#fef08a" stroke-width="1.5" stroke-dasharray="8 3" />
+        <path d="M 28 48 L 28 32 L 38 22 L 38 48 Z" fill="none" stroke="#38bdf8" stroke-width="2" />
+        <path d="M 38 48 L 38 16 L 48 10 L 48 48 Z" fill="rgba(56,189,248,0.2)" stroke="#38bdf8" stroke-width="2" />
+        <path d="M 48 48 L 48 26 L 56 34 L 56 48 Z" fill="none" stroke="#38bdf8" stroke-width="2" />
+        <path d="M 22 52 L 42 38 L 62 52" fill="none" stroke="#eab308" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="42" cy="60" r="11" fill="#0c131d" stroke="#eab308" stroke-width="2" />
+        <text x="42" y="65" font-family="'Outfit', sans-serif" font-weight="900" font-size="13" fill="#eab308" text-anchor="middle">H</text>
+      </g>
+      <text x="95" y="44" font-family="'Outfit', sans-serif" font-weight="900" font-size="34" fill="#eab308" letter-spacing="1">AL HEERA</text>
+      <text x="96" y="66" font-family="'Outfit', sans-serif" font-weight="700" font-size="15" fill="#cbd5e1" letter-spacing="3.5">ALUMINIUM &amp; GLASS</text>
+    </g>
+  </svg>
+
+  <!-- ================= PAGE 1: COVER PAGE ================= -->
+  <div class="slide-container dark-cover" id="slide1">
+    <!-- Header Logo & Tag -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <svg width="290" height="78" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-dark" />
+      </svg>
+      <div style="text-align:right;">
+        <span class="badge-gold">COMPANY PROFILE</span>
+        <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:600; margin-top:6px;">RAS AL KHAIMAH • UAE</p>
+      </div>
+    </div>
+
+    <!-- Title & Tagline Block (Top 50% Content) -->
+    <div style="display:flex; flex-direction:column; gap:16px; margin: 20px 0;">
+      <div style="width:70px; height:5px; background:#eab308; border-radius:2px;"></div>
+      <h1 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:46px; font-weight:900; color:#ffffff; line-height:1.08; letter-spacing:-1px;">
+        ALUMINIUM &amp; GLASS,<br>
+        <span style="color:#eab308;">BUILT TO LAST.</span>
+      </h1>
+      <p contenteditable="true" style="font-size:16px; color:#cbd5e1; font-weight:400; line-height:1.6; max-width:640px;">
+        Windows, doors, facades, partitions, skylights, and railings for homes, businesses, and commercial buildings across Ras Al Khaimah and the Northern Emirates.
+      </p>
+
+      <div style="display:flex; gap:16px; margin-top:4px;">
+        <span style="border:1px solid rgba(234,179,8,0.5); color:#fef08a; padding:6px 14px; border-radius:4px; font-size:12px; font-weight:700; letter-spacing:1px;">DESIGN</span>
+        <span style="border:1px solid rgba(234,179,8,0.5); color:#fef08a; padding:6px 14px; border-radius:4px; font-size:12px; font-weight:700; letter-spacing:1px;">FABRICATION</span>
+        <span style="border:1px solid rgba(234,179,8,0.5); color:#fef08a; padding:6px 14px; border-radius:4px; font-size:12px; font-weight:700; letter-spacing:1px;">INSTALLATION</span>
+      </div>
+    </div>
+
+    <!-- 50% Image Banner Bottom -->
+    <div style="width:100%; height:500px; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.15); position:relative; box-shadow:0 16px 32px rgba(0,0,0,0.6);">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80';" alt="Modern Glass Architecture Villa RAK" style="width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(12,19,29,0.95), transparent); padding:24px;">
+        <p style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:700; color:#ffffff;">Architectural Glass Facades &amp; Residential Glazing Solutions</p>
+        <p style="font-size:12px; color:#94a3b8; margin-top:2px;">Engineered for structural endurance and climate performance in Ras Al Khaimah.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-dark">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:500;">Al Heera Aluminium &amp; Glass LLC • Digdaga, RAK, UAE</p>
+      <p contenteditable="true" style="font-size:11px; color:#eab308; font-weight:800; letter-spacing:1px;">PAGE 01</p>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 2: 01 ABOUT US ================= -->
+  <div class="slide-container light-page" id="slide2">
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div>
+        <span class="badge-gold-subtle">01 ABOUT US</span>
+        <h2 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:800; color:#0f172a; margin-top:4px;">
+          YOUR ALUMINIUM &amp; GLASS PARTNER IN RAK
+        </h2>
+      </div>
+      <svg width="240" height="65" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-light" />
+      </svg>
+    </div>
+
+    <!-- 50/50 Split Content -->
+    <div style="display:flex; gap:28px; margin:24px 0; height:840px;">
+      <!-- Left 50%: Vertical Image with Overlay Badge -->
+      <div style="flex:1; position:relative; border-radius:12px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 8px 20px rgba(0,0,0,0.06);">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80" alt="Aluminium Window Frame Interior" style="width:100%; height:100%; object-fit:cover;">
+        <div style="position:absolute; bottom:20px; left:20px; right:20px; background:#eab308; padding:18px; border-radius:8px; color:#0f172a; box-shadow:0 8px 16px rgba(0,0,0,0.2);">
+          <p style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; line-height:1.2; text-transform:uppercase;">ONE TEAM.<br>START TO FINISH.</p>
+          <p style="font-size:12px; font-weight:600; margin-top:6px; color:#1e293b;">Consultation, design, fabrication, and installation — handled directly so nothing is lost between stages.</p>
+        </div>
+      </div>
+
+      <!-- Right 50%: Structured Text Information -->
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#f8fafc; padding:22px; border-radius:10px; border-left:4px solid #eab308; border-top:1px solid #e2e8f0; border-right:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0;">
+          <p contenteditable="true" style="font-size:14px; color:#334155; line-height:1.6; font-weight:500;">
+            <strong>Al Heera Aluminium &amp; Glass</strong> supplies and installs high-quality aluminium and glass systems for residential, commercial, and industrial projects.
+          </p>
+          <p contenteditable="true" style="font-size:13px; color:#64748b; line-height:1.6; margin-top:10px;">
+            Based in Ras Al Khaimah, we combine skilled craftsmanship with modern engineering to deliver work that is durable, impeccably finished, and tailored to the local climate.
+          </p>
+        </div>
+
+        <div style="margin-top:16px;">
+          <h3 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:18px; font-weight:800; color:#0f172a; margin-bottom:14px;">WHO WE WORK WITH</h3>
+          
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div class="card-light" style="border-left:3px solid #0f172a;">
+              <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:700; color:#0f172a;"><i class="fa-solid fa-house mr-2" style="color:#eab308;"></i> RESIDENTIAL</h4>
+              <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Villas, apartments, and home renovations — custom windows, doors, partitions, and balcony railings.</p>
+            </div>
+
+            <div class="card-light" style="border-left:3px solid #0f172a;">
+              <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:700; color:#0f172a;"><i class="fa-solid fa-building-user mr-2" style="color:#eab308;"></i> COMMERCIAL</h4>
+              <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Offices, shops, and showrooms — curtain wall glass fronts, structural facades, and interior glass walls.</p>
+            </div>
+
+            <div class="card-light" style="border-left:3px solid #0f172a;">
+              <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:700; color:#0f172a;"><i class="fa-solid fa-warehouse mr-2" style="color:#eab308;"></i> INDUSTRIAL</h4>
+              <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Warehouses and commercial facilities — heavy-duty aluminium systems built for high daily frequency.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#0f172a; color:#ffffff; padding:18px; border-radius:10px; display:flex; align-items:center; gap:16px;">
+          <i class="fa-solid fa-phone-volume" style="font-size:24px; color:#eab308;"></i>
+          <div>
+            <p style="font-size:11px; color:#eab308; font-weight:700; letter-spacing:1px;">DIRECT INQUIRIES &amp; ESTIMATES</p>
+            <p style="font-size:15px; font-weight:700; margin-top:2px;">+971 58 656 9334 / +971 50 539 5440</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-light">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:500;">Al Heera Aluminium &amp; Glass LLC • Ras Al Khaimah</p>
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:700;">PAGE 02</p>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 3: 02 WHY CHOOSE AL HEERA ================= -->
+  <div class="slide-container light-page" id="slide3">
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div>
+        <span class="badge-gold-subtle">02 WHY CHOOSE AL HEERA</span>
+        <h2 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:800; color:#0f172a; margin-top:4px;">
+          QUALITY YOU CAN SEE. SERVICE YOU CAN RELY ON.
+        </h2>
+      </div>
+      <svg width="240" height="65" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-light" />
+      </svg>
+    </div>
+
+    <!-- 50/50 Content Split -->
+    <div style="display:flex; gap:28px; margin:24px 0; height:840px;">
+      <!-- Left 50%: Image with Climate Banner Overlay -->
+      <div style="flex:1; position:relative; border-radius:12px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 8px 20px rgba(0,0,0,0.06);">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80" alt="Exterior Glass Curtain Wall" style="width:100%; height:100%; object-fit:cover;">
+        <div style="position:absolute; bottom:20px; left:20px; right:20px; background:#eab308; padding:18px; border-radius:8px; color:#0f172a; font-family:'Outfit',sans-serif; font-weight:900; font-size:20px; line-height:1.2;">
+          BUILT FOR THE<br>UAE CLIMATE
+        </div>
+      </div>
+
+      <!-- Right 50%: 4 Core Pillar Cards -->
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between;">
+        <p contenteditable="true" style="font-size:14px; color:#475569; font-weight:500; line-height:1.5;">
+          Aluminium and glass work is only as good as its materials, its precision measurements, and its installation. We take meticulous care of all three.
+        </p>
+
+        <div style="display:flex; flex-direction:column; gap:14px; margin-top:10px;">
+          <div class="card-light" style="display:flex; gap:16px; align-items:flex-start;">
+            <span style="background:#0f172a; color:#eab308; font-weight:800; font-size:14px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:6px; flex-shrink:0;">01</span>
+            <div>
+              <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a;">QUALITY &amp; PRECISION</h4>
+              <p contenteditable="true" style="font-size:13px; color:#64748b; margin-top:2px;">High-grade aluminium profiles and properly processed glass, installed to recognized standards for long-term durability and finish.</p>
+            </div>
+          </div>
+
+          <div class="card-light" style="display:flex; gap:16px; align-items:flex-start;">
+            <span style="background:#0f172a; color:#eab308; font-weight:800; font-size:14px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:6px; flex-shrink:0;">02</span>
+            <div>
+              <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a;">LOCAL EXPERTISE</h4>
+              <p contenteditable="true" style="font-size:13px; color:#64748b; margin-top:2px;">We know the intense heat, humidity, and dust of RAK and the Northern Emirates — recommending systems engineered to withstand them.</p>
+            </div>
+          </div>
+
+          <div class="card-light" style="display:flex; gap:16px; align-items:flex-start;">
+            <span style="background:#0f172a; color:#eab308; font-weight:800; font-size:14px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:6px; flex-shrink:0;">03</span>
+            <div>
+              <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a;">COMPLETE SERVICE</h4>
+              <p contenteditable="true" style="font-size:13px; color:#64748b; margin-top:2px;">Consultation, custom CAD design, fabrication, and installation, all seamlessly managed by one dedicated team.</p>
+            </div>
+          </div>
+
+          <div class="card-light" style="display:flex; gap:16px; align-items:flex-start;">
+            <span style="background:#0f172a; color:#eab308; font-weight:800; font-size:14px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:6px; flex-shrink:0;">04</span>
+            <div>
+              <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a;">ATTENTION TO DETAIL</h4>
+              <p contenteditable="true" style="font-size:13px; color:#64748b; margin-top:2px;">Careful site survey, clean fitting, and a flawless sealant finish — on every single window, door, partition, and panel.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:14px; border-radius:8px; text-align:center;">
+          <p style="font-size:12px; color:#475569; font-weight:600;"><i class="fa-solid fa-circle-check text-green-600 mr-1"></i> Certified Sealants (Dow Corning) &amp; Regional Glass Standards Compliant</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-light">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:500;">Al Heera Aluminium &amp; Glass LLC • Ras Al Khaimah</p>
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:700;">PAGE 03</p>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 4: 03 OUR SERVICES OVERVIEW ================= -->
+  <div class="slide-container light-page" id="slide4">
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div>
+        <span class="badge-gold-subtle">03 OUR SERVICES</span>
+        <h2 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:800; color:#0f172a; margin-top:4px;">
+          WHAT WE DO
+        </h2>
+      </div>
+      <svg width="240" height="65" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-light" />
+      </svg>
+    </div>
+
+    <!-- 50/50 Content Split -->
+    <div style="display:flex; gap:28px; margin:20px 0; height:840px;">
+      <!-- Left 50%: Stacked 3 Visual Image Tiles -->
+      <div style="flex:1; display:flex; flex-direction:column; gap:16px;">
+        <div style="flex:1; border-radius:10px; overflow:hidden; position:relative; border:1px solid #e2e8f0;">
+          <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Windows and Doors" style="width:100%; height:100%; object-fit:cover;">
+          <span style="position:absolute; bottom:12px; left:12px; background:rgba(15,23,42,0.85); color:#ffffff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px;">01. WINDOWS &amp; DOORS</span>
+        </div>
+        <div style="flex:1; border-radius:10px; overflow:hidden; position:relative; border:1px solid #e2e8f0;">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Glass Partitions" style="width:100%; height:100%; object-fit:cover;">
+          <span style="position:absolute; bottom:12px; left:12px; background:rgba(15,23,42,0.85); color:#ffffff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px;">03. GLASS PARTITIONS</span>
+        </div>
+        <div style="flex:1; border-radius:10px; overflow:hidden; position:relative; border:1px solid #e2e8f0;">
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Skylights & Canopies" style="width:100%; height:100%; object-fit:cover;">
+          <span style="position:absolute; bottom:12px; left:12px; background:rgba(15,23,42,0.85); color:#ffffff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px;">04. SKYLIGHTS &amp; CANOPIES</span>
+        </div>
+      </div>
+
+      <!-- Right 50%: 5 Core Service Breakdown List -->
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between;">
+        <p contenteditable="true" style="font-size:14px; color:#475569; font-weight:500;">
+          Five core service areas, each meticulously engineered, fabricated, and installed to suit your space, technical specifications, and budget.
+        </p>
+
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div class="card-light" style="border-left:4px solid #eab308;">
+            <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a;">01 WINDOWS &amp; DOORS</h4>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:2px;">Sliding, hinged, and folding aluminium systems engineered for thermal insulation, security, and smooth operation.</p>
+          </div>
+
+          <div class="card-light" style="border-left:4px solid #eab308;">
+            <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a;">02 CURTAIN WALLS &amp; FACADES</h4>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:2px;">Exterior glazing systems that protect from weather, maximize daylighting, and modernize building aesthetics.</p>
+          </div>
+
+          <div class="card-light" style="border-left:4px solid #eab308;">
+            <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a;">03 GLASS PARTITIONS</h4>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:2px;">Interior glass walls for offices and homes — open, bright spaces with high acoustic separation.</p>
+          </div>
+
+          <div class="card-light" style="border-left:4px solid #eab308;">
+            <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a;">04 SKYLIGHTS &amp; CANOPIES</h4>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:2px;">Custom overhead glass structures that bring natural sunlight indoors while completely sealing out elements.</p>
+          </div>
+
+          <div class="card-light" style="border-left:4px solid #eab308;">
+            <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a;">05 RAILINGS &amp; BALUSTRADES</h4>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:2px;">Safe, stylish glass and aluminium balustrades for balconies, staircases, and outdoor terraces.</p>
+          </div>
+        </div>
+
+        <!-- WhatsApp Callout Box -->
+        <div style="background:#0f172a; color:#ffffff; padding:18px; border-radius:10px; display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <p style="font-size:11px; color:#eab308; font-weight:800; letter-spacing:1px; text-transform:uppercase;">NOT SURE WHAT YOU NEED?</p>
+            <p style="font-size:12px; color:#cbd5e1; margin-top:2px;">Send site photos on WhatsApp for instant guidance.</p>
+          </div>
+          <div style="text-align:right;">
+            <span style="background:#22c55e; color:#ffffff; font-size:12px; font-weight:700; padding:6px 12px; border-radius:6px; display:inline-flex; align-items:center; gap:6px;">
+              <i class="fa-brands fa-whatsapp"></i> +971 58 656 9334
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-light">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:500;">Al Heera Aluminium &amp; Glass LLC • Ras Al Khaimah</p>
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:700;">PAGE 04</p>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 5: SERVICE 01 - WINDOWS & DOORS ================= -->
+  <div class="slide-container light-page" id="slide5">
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div>
+        <span class="badge-gold">SERVICES 01</span>
+        <h2 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:800; color:#0f172a; margin-top:4px;">
+          WINDOWS &amp; DOORS
+        </h2>
+      </div>
+      <svg width="240" height="65" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-light" />
+      </svg>
+    </div>
+
+    <!-- Top Summary Text & Opening Styles Badges -->
+    <div style="margin-top:14px;">
+      <p contenteditable="true" style="font-size:14px; color:#334155; line-height:1.5;">
+        Custom aluminium and glass windows and doors, made to measure for your exact architectural openings. Well-made systems keep heat, dust, and noise out while keeping your property secure.
+      </p>
+
+      <div style="display:flex; gap:12px; margin-top:12px;">
+        <span style="background:#f1f5f9; border:1px solid #cbd5e1; color:#0f172a; font-size:11px; font-weight:700; padding:6px 14px; border-radius:20px;"><i class="fa-solid fa-sliders text-amber-500 mr-1"></i> SLIDING SYSTEMS</span>
+        <span style="background:#f1f5f9; border:1px solid #cbd5e1; color:#0f172a; font-size:11px; font-weight:700; padding:6px 14px; border-radius:20px;"><i class="fa-solid fa-door-open text-amber-500 mr-1"></i> HINGED SYSTEMS</span>
+        <span style="background:#f1f5f9; border:1px solid #cbd5e1; color:#0f172a; font-size:11px; font-weight:700; padding:6px 14px; border-radius:20px;"><i class="fa-solid fa-layer-group text-amber-500 mr-1"></i> FOLDING (BI-FOLD)</span>
+      </div>
+    </div>
+
+    <!-- 50% Image & 50% Feature Grid -->
+    <div style="display:flex; gap:24px; margin:20px 0; height:680px;">
+      <!-- 50% HD Image -->
+      <div style="flex:1; border-radius:12px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 6px 18px rgba(0,0,0,0.06);">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80" alt="Aluminium Patio Doors Luxury Villa" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+
+      <!-- 50% Table / Feature Breakdown -->
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between;">
+        <h3 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a; border-bottom:2px solid #eab308; padding-bottom:6px;">WHAT YOU GET</h3>
+
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div class="card-light">
+            <p contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:14px; font-weight:800; color:#0f172a;">01. Better Insulation</p>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:2px;">Thermal break profiles &amp; double glazing units keep interiors cooler, reducing AC power consumption.</p>
+          </div>
+
+          <div class="card-light">
+            <p contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:14px; font-weight:800; color:#0f172a;">02. Security &amp; Safety</p>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:2px;">Heavy-duty extruded frames and reliable multi-point locking mechanisms for ultimate peace of mind.</p>
+          </div>
+
+          <div class="card-light">
+            <p contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:14px; font-weight:800; color:#0f172a;">03. Smooth Operation</p>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:2px;">Stainless steel rollers and heavy-duty hinges ensuring effortless operation day after day.</p>
+          </div>
+
+          <div class="card-light">
+            <p contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:14px; font-weight:800; color:#0f172a;">04. Made to Measure</p>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:2px;">Custom powder-coated or anodized colors matched precisely to your interior architectural theme.</p>
+          </div>
+        </div>
+
+        <div>
+          <p contenteditable="true" style="font-size:12px; font-weight:800; color:#0f172a; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">IDEAL APPLICATIONS</p>
+          <div style="display:flex; gap:8px;">
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Villas</span>
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Apartments</span>
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Shops</span>
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Offices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-light">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:500;">Al Heera Aluminium &amp; Glass LLC • Ras Al Khaimah</p>
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:700;">PAGE 05</p>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 6: SERVICE 02 - CURTAIN WALLS & FACADES ================= -->
+  <div class="slide-container light-page" id="slide6">
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div>
+        <span class="badge-gold">SERVICES 02</span>
+        <h2 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:800; color:#0f172a; margin-top:4px;">
+          CURTAIN WALLS &amp; FACADES
+        </h2>
+      </div>
+      <svg width="240" height="65" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-light" />
+      </svg>
+    </div>
+
+    <p contenteditable="true" style="font-size:14px; color:#334155; line-height:1.5; margin-top:12px;">
+      Strong exterior structural glazing that gives your building a clean, modern face. Modern facade systems protect the building from weather elements, fill interiors with natural light, and project a sharp corporate image.
+    </p>
+
+    <!-- 50/50 Split -->
+    <div style="display:flex; gap:24px; margin:20px 0; height:720px;">
+      <!-- 50% Image -->
+      <div style="flex:1; border-radius:12px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 6px 18px rgba(0,0,0,0.06);">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="High Rise Structural Glass Facade" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+
+      <!-- 50% Content -->
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between;">
+        <h3 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a; border-bottom:2px solid #eab308; padding-bottom:6px;">KEY BENEFITS &amp; ADVANTAGES</h3>
+
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card-light" style="border-left:4px solid #eab308;">
+            <p contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a;">01. Weather &amp; Wind Resistance</p>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Robust structural aluminium systems designed to handle intense UAE solar heat, high wind loads, and sandstorms.</p>
+          </div>
+
+          <div class="card-light" style="border-left:4px solid #eab308;">
+            <p contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a;">02. Natural Light &amp; Energy Savings</p>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Maximizes ambient interior daylight while Low-E double glass coating blocks solar infrared heat radiation.</p>
+          </div>
+
+          <div class="card-light" style="border-left:4px solid #eab308;">
+            <p contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a;">03. High Impact First Impression</p>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">A sleek, contemporary architectural exterior that elevates the market value and commercial prestige of your property.</p>
+          </div>
+        </div>
+
+        <div>
+          <p contenteditable="true" style="font-size:12px; font-weight:800; color:#0f172a; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">RECOMMENDED FOR</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Commercial Towers</span>
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Showrooms</span>
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Office Fronts</span>
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Villa Elevations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-light">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:500;">Al Heera Aluminium &amp; Glass LLC • Ras Al Khaimah</p>
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:700;">PAGE 06</p>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 7: SERVICE 03 - GLASS PARTITIONS ================= -->
+  <div class="slide-container light-page" id="slide7">
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div>
+        <span class="badge-gold">SERVICES 03</span>
+        <h2 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:800; color:#0f172a; margin-top:4px;">
+          GLASS PARTITIONS
+        </h2>
+      </div>
+      <svg width="240" height="65" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-light" />
+      </svg>
+    </div>
+
+    <p contenteditable="true" style="font-size:14px; color:#334155; line-height:1.5; margin-top:12px;">
+      Elegant interior glass walls that divide space without closing it off. Glass partitions let light flow through the whole space while giving each area privacy and distinct functionality.
+    </p>
+
+    <!-- 50/50 Split -->
+    <div style="display:flex; gap:24px; margin:20px 0; height:720px;">
+      <!-- 50% Image -->
+      <div style="flex:1; border-radius:12px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 6px 18px rgba(0,0,0,0.06);">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80" alt="Frameless Office Interior Glass Partitions" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+
+      <!-- 50% Text Details -->
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between;">
+        <h3 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a; border-bottom:2px solid #eab308; padding-bottom:6px;">WHAT YOU GET</h3>
+
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card-light">
+            <p contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a;">01 Open, Bright Spaces</p>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Daylight reaches deep into inner corridors, making rooms feel significantly larger, open, and more welcoming.</p>
+          </div>
+
+          <div class="card-light">
+            <p contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a;">02 Sound Separation</p>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Acoustic laminated glass panels create quiet spaces for meetings, executive calls, and focused work environments.</p>
+          </div>
+
+          <div class="card-light">
+            <p contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a;">03 Custom Privacy Styles</p>
+            <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Select clear toughened glass, frosted privacy films, or custom patterned graphics tailored to your branding.</p>
+          </div>
+        </div>
+
+        <div>
+          <p contenteditable="true" style="font-size:12px; font-weight:800; color:#0f172a; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">SUITABLE SPACES</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Corporate Offices</span>
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Meeting Rooms</span>
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Medical Clinics</span>
+            <span style="background:#0f172a; color:#ffffff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:4px;">Luxury Homes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-light">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:500;">Al Heera Aluminium &amp; Glass LLC • Ras Al Khaimah</p>
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:700;">PAGE 07</p>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 8: SERVICES 04 & 05 ================= -->
+  <div class="slide-container light-page" id="slide8">
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div>
+        <span class="badge-gold">SERVICES 04 &amp; 05</span>
+        <h2 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:800; color:#0f172a; margin-top:4px;">
+          SKYLIGHTS &amp; BALUSTRADES
+        </h2>
+      </div>
+      <svg width="240" height="65" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-light" />
+      </svg>
+    </div>
+
+    <!-- 50/50 Dual Service Layout -->
+    <div style="display:flex; flex-direction:column; gap:20px; margin:18px 0; height:840px;">
+      
+      <!-- Section 04: Skylights & Canopies -->
+      <div style="flex:1; display:flex; gap:20px; background:#f8fafc; border:1px solid #e2e8f0; padding:18px; border-radius:12px;">
+        <div style="width:45%; border-radius:8px; overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Overhead Glass Skylight Structure" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div style="width:55%; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <span style="font-size:11px; font-weight:800; color:#ca8a04; letter-spacing:1px;">SERVICE 04</span>
+            <h3 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:20px; font-weight:800; color:#0f172a;">SKYLIGHTS &amp; CANOPIES</h3>
+            <p contenteditable="true" style="font-size:12px; color:#475569; margin-top:6px; line-height:1.5;">
+              Bespoke overhead glass structures engineered to flood interiors with daylight while sealing out solar heat, wind, rain, and sand.
+            </p>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:6px; margin-top:10px;">
+            <div style="font-size:11px; font-weight:600; color:#334155;"><i class="fa-solid fa-sun text-amber-500 mr-2"></i> Solar control laminated glass for heat shield</div>
+            <div style="font-size:11px; font-weight:600; color:#334155;"><i class="fa-solid fa-umbrella text-amber-500 mr-2"></i> 100% water-tight flashing and structural seals</div>
+          </div>
+          <div style="margin-top:8px;">
+            <span style="font-size:10px; font-weight:700; background:#0f172a; color:#ffffff; padding:4px 8px; border-radius:3px;">Courtyards • Stairwells • Sunrooms</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 05: Railings & Balustrades -->
+      <div style="flex:1; display:flex; gap:20px; background:#f8fafc; border:1px solid #e2e8f0; padding:18px; border-radius:12px;">
+        <div style="width:45%; border-radius:8px; overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Balcony Frameless Glass Balustrade" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div style="width:55%; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <span style="font-size:11px; font-weight:800; color:#ca8a04; letter-spacing:1px;">SERVICE 05</span>
+            <h3 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:20px; font-weight:800; color:#0f172a;">RAILINGS &amp; BALUSTRADES</h3>
+            <p contenteditable="true" style="font-size:12px; color:#475569; margin-top:6px; line-height:1.5;">
+              Safe, stylish glass and aluminium railings for balconies, staircases, and outdoor terraces — heavy structural endurance with open views.
+            </p>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:6px; margin-top:10px;">
+            <div style="font-size:11px; font-weight:600; color:#334155;"><i class="fa-solid fa-shield-halved text-amber-500 mr-2"></i> Toughened laminated safety glass standards</div>
+            <div style="font-size:11px; font-weight:600; color:#334155;"><i class="fa-solid fa-eye text-amber-500 mr-2"></i> Uninterrupted panoramic view base track systems</div>
+          </div>
+          <div style="margin-top:8px;">
+            <span style="font-size:10px; font-weight:700; background:#0f172a; color:#ffffff; padding:4px 8px; border-radius:3px;">Balconies • Staircases • Terraces</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-light">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:500;">Al Heera Aluminium &amp; Glass LLC • Ras Al Khaimah</p>
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:700;">PAGE 08</p>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 9: 04 HOW WE WORK ================= -->
+  <div class="slide-container light-page" id="slide9">
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div>
+        <span class="badge-gold-subtle">04 HOW WE WORK</span>
+        <h2 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:800; color:#0f172a; margin-top:4px;">
+          A CLEAR PROCESS, FROM ENQUIRY TO INSTALLATION
+        </h2>
+      </div>
+      <svg width="240" height="65" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-light" />
+      </svg>
+    </div>
+
+    <p contenteditable="true" style="font-size:14px; color:#475569; font-weight:500; margin-top:10px;">
+      Every project follows the same simple, transparent 6-step workflow, ensuring complete clarity, speed, and accuracy from initial site measure to final handover.
+    </p>
+
+    <!-- 6 Step Process Grid -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0;">
+      
+      <div class="card-light" style="border-top:4px solid #eab308;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-family:'Outfit',sans-serif; font-weight:900; font-size:20px; color:#ca8a04;">01</span>
+          <span style="font-size:10px; font-weight:700; background:#0f172a; color:#ffffff; padding:2px 8px; border-radius:3px;">YOU SHARE</span>
+        </div>
+        <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a; margin-top:6px;">CONSULTATION</h4>
+        <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Tell us what you need by phone, WhatsApp, or a visit to our office. We listen and suggest the ideal glass system options.</p>
+      </div>
+
+      <div class="card-light" style="border-top:4px solid #eab308;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-family:'Outfit',sans-serif; font-weight:900; font-size:20px; color:#ca8a04;">02</span>
+          <span style="font-size:10px; font-weight:700; background:#0f172a; color:#ffffff; padding:2px 8px; border-radius:3px;">WE CONFIRM</span>
+        </div>
+        <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a; margin-top:6px;">SITE VISIT &amp; MEASUREMENT</h4>
+        <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Our engineering team visits your site to perform precision measurements, verifying structural openings and site conditions.</p>
+      </div>
+
+      <div class="card-light" style="border-top:4px solid #eab308;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-family:'Outfit',sans-serif; font-weight:900; font-size:20px; color:#ca8a04;">03</span>
+          <span style="font-size:10px; font-weight:700; background:#0f172a; color:#ffffff; padding:2px 8px; border-radius:3px;">YOU APPROVE</span>
+        </div>
+        <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a; margin-top:6px;">DESIGN &amp; QUOTATION</h4>
+        <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">We recommend exact profiles, finishes, and glass specifications along with a detailed, transparent price quotation.</p>
+      </div>
+
+      <div class="card-light" style="border-top:4px solid #eab308;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-family:'Outfit',sans-serif; font-weight:900; font-size:20px; color:#ca8a04;">04</span>
+          <span style="font-size:10px; font-weight:700; background:#0f172a; color:#ffffff; padding:2px 8px; border-radius:3px;">WE BUILD</span>
+        </div>
+        <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a; margin-top:6px;">FABRICATION</h4>
+        <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Aluminium profiles are precision cut, corner crimped, milled, and glazed strictly to your approved CAD designs.</p>
+      </div>
+
+      <div class="card-light" style="border-top:4px solid #eab308;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-family:'Outfit',sans-serif; font-weight:900; font-size:20px; color:#ca8a04;">05</span>
+          <span style="font-size:10px; font-weight:700; background:#0f172a; color:#ffffff; padding:2px 8px; border-radius:3px;">WE INSTALL</span>
+        </div>
+        <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a; margin-top:6px;">INSTALLATION</h4>
+        <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">Our trained technicians anchor, seal, and finish the job cleanly with maximum respect and care for your property.</p>
+      </div>
+
+      <div class="card-light" style="border-top:4px solid #eab308;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-family:'Outfit',sans-serif; font-weight:900; font-size:20px; color:#ca8a04;">06</span>
+          <span style="font-size:10px; font-weight:700; background:#0f172a; color:#ffffff; padding:2px 8px; border-radius:3px;">YOU RECEIVE</span>
+        </div>
+        <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; color:#0f172a; margin-top:6px;">HANDOVER</h4>
+        <p contenteditable="true" style="font-size:12px; color:#64748b; margin-top:4px;">We inspect every lock, joint, and seal together before signing off the job as completely finished.</p>
+      </div>
+
+    </div>
+
+    <!-- Process Image Banner -->
+    <div style="width:100%; height:260px; border-radius:10px; overflow:hidden; border:1px solid #e2e8f0; position:relative;">
+      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80" alt="Precision Aluminium Milling & Assembly" style="width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; inset:0; background:rgba(15,23,42,0.6); display:flex; align-items:center; justify-content:center; padding:20px; text-align:center;">
+        <p style="font-family:'Outfit',sans-serif; font-size:18px; font-weight:800; color:#ffffff;">PRECISION MANUFACTURING &amp; FACTORY TESTED QUALITY</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-light">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:500;">Al Heera Aluminium &amp; Glass LLC • Ras Al Khaimah</p>
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:700;">PAGE 09</p>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 10: 05 GALLERY ================= -->
+  <div class="slide-container light-page" id="slide10">
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div>
+        <span class="badge-gold-subtle">05 GALLERY</span>
+        <h2 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:800; color:#0f172a; margin-top:4px;">
+          SPACES WE HELP CREATE
+        </h2>
+      </div>
+      <svg width="240" height="65" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-light" />
+      </svg>
+    </div>
+
+    <p contenteditable="true" style="font-size:14px; color:#475569; font-weight:500; margin-top:8px;">
+      Aluminium and glass solutions installed across luxury villas, corporate offices, and commercial spaces in Ras Al Khaimah.
+    </p>
+
+    <!-- 6-Tile HD Image Showcase Grid -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0; height:780px;">
+      
+      <div style="position:relative; border-radius:10px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial Facades RAK" style="width:100%; height:100%; object-fit:cover;">
+        <span style="position:absolute; bottom:10px; left:10px; background:rgba(15,23,42,0.85); color:#ffffff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px;">COMMERCIAL FACADES</span>
+      </div>
+
+      <div style="position:relative; border-radius:10px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Villa Windows RAK" style="width:100%; height:100%; object-fit:cover;">
+        <span style="position:absolute; bottom:10px; left:10px; background:rgba(15,23,42,0.85); color:#ffffff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px;">LUXURY VILLA WINDOWS</span>
+      </div>
+
+      <div style="position:relative; border-radius:10px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office Partitions RAK" style="width:100%; height:100%; object-fit:cover;">
+        <span style="position:absolute; bottom:10px; left:10px; background:rgba(15,23,42,0.85); color:#ffffff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px;">OFFICE GLASS PARTITIONS</span>
+      </div>
+
+      <div style="position:relative; border-radius:10px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Glass Skylights RAK" style="width:100%; height:100%; object-fit:cover;">
+        <span style="position:absolute; bottom:10px; left:10px; background:rgba(15,23,42,0.85); color:#ffffff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px;">OVERHEAD SKYLIGHTS</span>
+      </div>
+
+      <div style="position:relative; border-radius:10px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Sliding Patio Systems" style="width:100%; height:100%; object-fit:cover;">
+        <span style="position:absolute; bottom:10px; left:10px; background:rgba(15,23,42,0.85); color:#ffffff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px;">SLIDING PATIO SYSTEMS</span>
+      </div>
+
+      <div style="position:relative; border-radius:10px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Terrace Balustrades" style="width:100%; height:100%; object-fit:cover;">
+        <span style="position:absolute; bottom:10px; left:10px; background:rgba(15,23,42,0.85); color:#ffffff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px;">TERRACE BALUSTRADES</span>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-light">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:500;">Al Heera Aluminium &amp; Glass LLC • Ras Al Khaimah</p>
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:700;">PAGE 10</p>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 11: COMPANY INFORMATION AT A GLANCE ================= -->
+  <div class="slide-container light-page" id="slide11">
+    <!-- Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div>
+        <span class="badge-gold-subtle">COMPANY INFORMATION</span>
+        <h2 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:800; color:#0f172a; margin-top:4px;">
+          AT A GLANCE
+        </h2>
+      </div>
+      <svg width="240" height="65" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-light" />
+      </svg>
+    </div>
+
+    <p contenteditable="true" style="font-size:13px; color:#64748b; font-weight:500; margin-top:8px;">
+      Essential corporate details and references for clients, main contractors, and engineering consultants.
+    </p>
+
+    <!-- Detailed Table Grid -->
+    <div style="margin:20px 0; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden;">
+      <table style="width:100%; border-collapse:collapse; font-size:13px;">
+        <tbody>
+          <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+            <td style="padding:12px 18px; font-weight:700; color:#0f172a; width:30%;">COMPANY NAME</td>
+            <td style="padding:12px 18px; color:#334155; font-weight:600;">AL HEERA ALUMINIUM &amp; GLASS LLC</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:12px 18px; font-weight:700; color:#0f172a;">LOCATION</td>
+            <td style="padding:12px 18px; color:#334155;">Airport Road, Opp. ADIB Bank, Digdaga, Ras Al Khaimah, UAE</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+            <td style="padding:12px 18px; font-weight:700; color:#0f172a;">CORE SERVICES</td>
+            <td style="padding:12px 18px; color:#334155;">Windows &amp; doors, curtain walls &amp; facades, glass partitions, skylights &amp; canopies, railings &amp; balustrades</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:12px 18px; font-weight:700; color:#0f172a;">SECTORS SERVED</td>
+            <td style="padding:12px 18px; color:#334155;">Residential villas, commercial towers, retail showrooms, industrial facilities</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+            <td style="padding:12px 18px; font-weight:700; color:#0f172a;">GEOGRAPHIC COVERAGE</td>
+            <td style="padding:12px 18px; color:#334155; font-weight:600; color:#ca8a04;">Ras Al Khaimah &amp; Northern Emirates, UAE</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:12px 18px; font-weight:700; color:#0f172a;">CONTACT NUMBERS</td>
+            <td style="padding:12px 18px; color:#334155; font-weight:600;">+971 58 656 9334 &bull; +971 54 799 6617 &bull; +971 50 942 7363</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 18px; font-weight:700; color:#0f172a;">EMAIL CONTACT</td>
+            <td style="padding:12px 18px; color:#334155;">alheeraaluminium@gmail.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Client References Box -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:20px; border-radius:10px; margin-top:10px;">
+      <h4 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:800; color:#0f172a; margin-bottom:10px;">
+        CLIENTS &amp; SUBMITTAL DOCUMENTS
+      </h4>
+      <p contenteditable="true" style="font-size:12px; color:#64748b; line-height:1.5;">
+        Trade License copy, Commercial Registration, VAT Certificate, Technical Material Submittals, and Project Completion Certificates are readily available upon request for consultant prequalification.
+      </p>
+      
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px;">
+        <div style="background:#ffffff; border:1px dashed #cbd5e1; padding:10px; border-radius:6px; font-size:11px; font-weight:700; color:#0f172a; text-align:center;">
+          <i class="fa-solid fa-file-check text-amber-500 mr-1"></i> Trade License &amp; Chamber Approval
+        </div>
+        <div style="background:#ffffff; border:1px dashed #cbd5e1; padding:10px; border-radius:6px; font-size:11px; font-weight:700; color:#0f172a; text-align:center;">
+          <i class="fa-solid fa-certificate text-amber-500 mr-1"></i> Dow Corning Sealant Warranty
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-light" style="margin-top:auto;">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:500;">Al Heera Aluminium &amp; Glass LLC • Ras Al Khaimah</p>
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8; font-weight:700;">PAGE 11</p>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 12: BACK COVER ================= -->
+  <div class="slide-container dark-cover" id="slide12">
+    <!-- Header Logo & Tag -->
+    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <svg width="290" height="78" viewBox="0 0 340 82">
+        <use href="#al-heera-logo-dark" />
+      </svg>
+      <span class="badge-gold">GET IN TOUCH</span>
+    </div>
+
+    <!-- Title Block -->
+    <div style="margin:20px 0;">
+      <h2 contenteditable="true" style="font-family:'Outfit',sans-serif; font-size:38px; font-weight:900; color:#ffffff; line-height:1.15;">
+        LET'S TALK ABOUT YOUR PROJECT.
+      </h2>
+      <p contenteditable="true" style="font-size:15px; color:#94a3b8; margin-top:8px;">
+        Call, WhatsApp, or visit our office in Digdaga. Tell us what you have in mind and our technical team will guide you to the ideal solution.
+      </p>
+    </div>
+
+    <!-- Contact Cards Grid -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0;">
+      <div class="card-dark" style="border-left:4px solid #eab308;">
+        <p style="font-size:11px; font-weight:800; color:#eab308; letter-spacing:1px; text-transform:uppercase;">CALL / WHATSAPP</p>
+        <p contenteditable="true" style="font-size:15px; font-weight:700; color:#ffffff; margin-top:8px;"><i class="fa-solid fa-phone text-amber-500 mr-2"></i> +971 58 656 9334</p>
+        <p contenteditable="true" style="font-size:15px; font-weight:700; color:#ffffff; margin-top:4px;"><i class="fa-solid fa-phone text-amber-500 mr-2"></i> +971 54 799 6617</p>
+        <p contenteditable="true" style="font-size:15px; font-weight:700; color:#ffffff; margin-top:4px;"><i class="fa-solid fa-phone text-amber-500 mr-2"></i> +971 50 942 7363</p>
+      </div>
+
+      <div class="card-dark" style="border-left:4px solid #eab308;">
+        <p style="font-size:11px; font-weight:800; color:#eab308; letter-spacing:1px; text-transform:uppercase;">EMAIL &amp; LOCATION</p>
+        <p contenteditable="true" style="font-size:13px; font-weight:600; color:#f8fafc; margin-top:8px;"><i class="fa-solid fa-envelope text-amber-500 mr-2"></i> alheeraaluminium@gmail.com</p>
+        <p contenteditable="true" style="font-size:13px; font-weight:600; color:#f8fafc; margin-top:8px;"><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i> Airport Road, Opp. ADIB Bank, Digdaga, Ras Al Khaimah, UAE</p>
+      </div>
+    </div>
+
+    <!-- 50% Image Skyline Banner -->
+    <div style="width:100%; height:380px; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.15); position:relative; box-shadow:0 12px 28px rgba(0,0,0,0.5);">
+      <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=1200&q=80" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80';" alt="Architectural Glass Facade Building" style="width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(12,19,29,0.9), transparent); display:flex; align-items:flex-end; padding:24px;">
+        <div>
+          <span style="background:#eab308; color:#0f172a; font-size:11px; font-weight:800; padding:4px 10px; border-radius:3px;">PROUDLY SERVING RAK &amp; NORTHERN EMIRATES</span>
+          <p style="font-family:'Outfit',sans-serif; font-size:18px; font-weight:800; color:#ffffff; margin-top:6px;">Your Trusted Partner for Architectural Aluminium &amp; Glass</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Footer Tags -->
+    <div style="display:flex; justify-content:space-around; align-items:center; background:rgba(255,255,255,0.05); padding:10px; border-radius:6px; font-size:11px; font-weight:700; color:#ca8a04; letter-spacing:1px;">
+      <span>WINDOWS</span> • <span>DOORS</span> • <span>FACADES</span> • <span>PARTITIONS</span> • <span>SKYLIGHTS</span> • <span>RAILINGS</span>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-dark">
+      <p contenteditable="true" style="font-size:11px; color:#94a3b8;">© AL HEERA ALUMINIUM &amp; GLASS LLC. All Rights Reserved.</p>
+      <p contenteditable="true" style="font-size:11px; color:#eab308; font-weight:700;">RAS AL KHAIMAH, UAE</p>
+    </div>
+  </div>
+
+</body>
+</html>
