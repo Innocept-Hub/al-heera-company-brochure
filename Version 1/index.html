@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Al Heera Aluminium & Glass — Company Profile</title>
+<style>
+@font-face{font-family:Saira;src:url(fonts/saira-condensed-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Saira;src:url(fonts/saira-condensed-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Saira;src:url(fonts/saira-condensed-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Saira;src:url(fonts/saira-condensed-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:Manrope;src:url(fonts/manrope-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Manrope;src:url(fonts/manrope-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Manrope;src:url(fonts/manrope-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Manrope;src:url(fonts/manrope-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Manrope;src:url(fonts/manrope-latin-800-normal.woff2);font-weight:800}
+
+:root{--gold:#E9B31C;--gold2:#C9930A;--ink:#0F1012;--char:#17191C;--char2:#212429;--glass:#BEE7F7;--paper:#F5F3EF;--line:#DDD8CE;--mute:#6B6F76;--mute-d:#A7ABB2}
+@page{size:210mm 297mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#888}
+body{font-family:Manrope,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:var(--paper)}
+.page:last-child{page-break-after:auto}
+.dark{background:var(--ink);color:#fff}
+img{display:block}
+.ph{width:100%;height:100%;object-fit:cover}
+h1,h2,h3,.disp{font-family:Saira,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:.92}
+.eyebrow{font-family:Saira;font-weight:600;letter-spacing:.28em;text-transform:uppercase;font-size:9.5pt;color:var(--gold2)}
+.dark .eyebrow{color:var(--gold)}
+.num{font-family:Saira;font-weight:800;color:var(--gold)}
+p{font-size:10pt;line-height:1.62}
+.lead{font-size:12.5pt;line-height:1.5;font-weight:500}
+.gold{color:var(--gold)} .gold2{color:var(--gold2)}
+.rule{height:1.2mm;width:18mm;background:var(--gold)}
+
+/* running header / footer on inner pages */
+.hdr{position:absolute;top:12mm;left:16mm;right:16mm;display:flex;justify-content:space-between;align-items:center;font-family:Saira;font-weight:600;font-size:8.5pt;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.dark .hdr{color:var(--mute-d)}
+.hdr img{height:7mm}
+.ftr{position:absolute;bottom:11mm;left:16mm;right:16mm;display:flex;justify-content:space-between;align-items:center;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);border-top:.25mm solid var(--line);padding-top:3mm}
+.dark .ftr{border-color:#2d3036;color:var(--mute-d)}
+.ftr b{font-family:Saira;font-weight:700;font-size:10pt;color:var(--gold2);letter-spacing:.05em}
+.dark .ftr b{color:var(--gold)}
+
+/* ---------- COVER ---------- */
+.cover .grid{position:absolute;inset:0;background:
+ linear-gradient(90deg,rgba(233,179,28,.07) 1px,transparent 1px) 0 0/30mm 30mm,
+ linear-gradient(0deg,rgba(233,179,28,.07) 1px,transparent 1px) 0 0/30mm 30mm}
+.cover .logo{position:absolute;top:18mm;left:16mm;width:92mm}
+.cover .frame{position:absolute;top:50mm;right:0;width:150mm;height:118mm;border-left:2.2mm solid var(--gold);overflow:hidden}
+.cover .frame img{filter:saturate(1.05) contrast(1.05)}
+.cover .frame .mull{position:absolute;inset:0;background:
+ linear-gradient(90deg,transparent calc(50% - .6mm),rgba(15,16,18,.92) calc(50% - .6mm),rgba(15,16,18,.92) calc(50% + .6mm),transparent calc(50% + .6mm)),
+ linear-gradient(0deg,transparent calc(38% - .6mm),rgba(15,16,18,.92) calc(38% - .6mm),rgba(15,16,18,.92) calc(38% + .6mm),transparent calc(38% + .6mm))}
+.cover .frame .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,16,18,.55),transparent 45%)}
+.cover .title{position:absolute;left:16mm;top:176mm;width:170mm}
+.cover h1{font-size:47pt;font-weight:800;line-height:.9}
+.cover h1 span{color:var(--gold)}
+.cover .sub{margin-top:6mm;font-size:12pt;line-height:1.5;color:#D7D9DD;max-width:140mm}
+.cover .band{position:absolute;left:0;right:0;bottom:0;height:30mm;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 16mm}
+.cover .band .disp{font-size:22pt;font-weight:800}
+.cover .band small{font-family:Saira;font-weight:700;font-size:10.5pt;letter-spacing:.28em;text-transform:uppercase;text-align:right;line-height:1.5}
+.cover .tag{position:absolute;top:196mm;right:16mm}
+
+/* ---------- ABOUT ---------- */
+.about .img{position:absolute;top:0;right:0;width:92mm;height:150mm}
+.about .img::after{content:"";position:absolute;left:0;bottom:0;width:30mm;height:30mm;background:var(--gold)}
+.about .txt{position:absolute;top:34mm;left:16mm;width:92mm}
+.about h2{font-size:38pt;font-weight:800;margin:4mm 0 6mm}
+.about p+p{margin-top:3.2mm}
+.about .sect{position:absolute;left:16mm;right:16mm;top:170mm}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin-top:6mm}
+.card{background:#fff;border-top:1.2mm solid var(--gold);padding:6mm 5.5mm 6.5mm}
+.card h3{font-size:17pt;font-weight:700;margin-bottom:2.5mm}
+.card p{font-size:9pt;line-height:1.55;color:#40444B}
+.about .quote{position:absolute;left:16mm;right:16mm;top:238mm;background:var(--ink);color:#fff;padding:8mm 10mm;display:flex;align-items:center;gap:8mm}
+.about .quote .disp{font-size:22pt;font-weight:700;line-height:1}
+.about .quote p{font-size:9.5pt;color:#C9CCD1;line-height:1.5}
+
+/* ---------- WHY ---------- */
+.why .top{position:absolute;top:30mm;left:16mm;right:16mm}
+.why h2{font-size:42pt;font-weight:800;margin-top:4mm}
+.why .intro{margin-top:5mm;max-width:150mm;color:#C9CCD1}
+.why .list{position:absolute;top:100mm;left:16mm;width:100mm}
+.why .item{display:flex;gap:6mm;padding:6mm 0;border-bottom:.25mm solid #2d3036}
+.why .item:first-child{border-top:.25mm solid #2d3036}
+.why .item .num{font-size:26pt;line-height:1;min-width:13mm}
+.why .item h3{font-size:16pt;font-weight:700;margin-bottom:1.8mm}
+.why .item p{font-size:9.3pt;color:#B9BDC4;line-height:1.55}
+.why .side{position:absolute;top:100mm;right:0;width:76mm;height:150mm}
+.why .side .ph{filter:grayscale(.1)}
+.why .side .cap{position:absolute;left:-10mm;bottom:12mm;background:var(--gold);color:var(--ink);padding:5mm 6mm;width:62mm}
+.why .side .cap .disp{font-size:17pt;font-weight:800;line-height:.95}
+
+/* ---------- SERVICES OVERVIEW ---------- */
+.svc .top{position:absolute;top:30mm;left:16mm;right:16mm;display:flex;justify-content:space-between;align-items:flex-end}
+.svc h2{font-size:42pt;font-weight:800;margin-top:4mm}
+.svc .top p{width:72mm;color:#40444B}
+.svc .tiles{position:absolute;top:86mm;left:16mm;right:16mm;display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.tile{background:#fff;display:flex;height:48mm}
+.tile .t-img{width:44%;flex:none}
+.tile .t-body{padding:5mm 5mm;display:flex;flex-direction:column}
+.tile .num{font-size:14pt}
+.tile h3{font-size:15pt;font-weight:700;margin:1.5mm 0 2mm}
+.tile p{font-size:8.6pt;line-height:1.5;color:#40444B}
+.tile.wa{background:var(--ink);color:#fff;padding:7mm 7mm;flex-direction:column;justify-content:center}
+.tile.wa h3{font-size:19pt;color:var(--gold);margin:0 0 2.5mm}
+.tile.wa p{color:#C9CCD1;font-size:9pt}
+.tile.wa .ph-no{font-family:Saira;font-weight:700;font-size:17pt;margin-top:3mm;letter-spacing:.02em}
+
+/* ---------- SERVICE DETAIL (shared) ---------- */
+.sd .hero{position:absolute;top:0;left:0;right:0;height:100mm}
+.sd .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,16,18,.6),rgba(15,16,18,0) 22%),linear-gradient(0deg,rgba(15,16,18,.82),rgba(15,16,18,.05) 55%)}
+.sd .hero .hdr{z-index:2;color:#E3E5E8}
+.sd .hero .ttl{position:absolute;left:16mm;bottom:10mm;z-index:2;color:#fff}
+.sd .hero .ttl .num{font-size:15pt;letter-spacing:.1em}
+.sd .hero h2{font-size:50pt;font-weight:800;margin-top:1mm}
+.sd .body{position:absolute;top:110mm;left:16mm;right:16mm;display:grid;grid-template-columns:1.05fr 1fr;gap:12mm}
+.sd .lead{margin-bottom:4mm}
+.sd h4{font-family:Saira;font-weight:700;text-transform:uppercase;letter-spacing:.18em;font-size:10pt;color:var(--gold2);margin:6mm 0 3mm}
+.dark.sd h4{color:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:2.2mm}
+.chip{border:.3mm solid var(--ink);padding:1.6mm 3.6mm;font-size:8.6pt;font-weight:600}
+.dark .chip{border-color:#4a4e56;color:#E3E5E8}
+.ben{display:flex;gap:4mm;padding:4.2mm 0;border-bottom:.25mm solid var(--line)}
+.dark .ben{border-color:#2d3036}
+.ben .n{font-family:Saira;font-weight:800;color:var(--gold2);font-size:14pt;min-width:9mm;line-height:1.1}
+.dark .ben .n{color:var(--gold)}
+.ben h5{font-size:10.5pt;font-weight:700;margin-bottom:.8mm}
+.ben p{font-size:9pt;line-height:1.5;color:#50545B}
+.dark .ben p{color:#B9BDC4}
+.types{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin-top:1mm}
+.type{background:#fff;padding:4mm 3.5mm;border-left:1mm solid var(--gold)}
+.dark .type{background:var(--char2)}
+.type b{font-family:Saira;font-size:13pt;font-weight:700;text-transform:uppercase;display:block;margin-bottom:1mm}
+.type span{font-size:8.2pt;line-height:1.4;color:#50545B;display:block}
+.dark .type span{color:#B9BDC4}
+.strip{position:absolute;left:16mm;right:16mm;bottom:25mm;height:36mm;display:grid;gap:4mm;grid-auto-rows:100%}
+.strip>img{height:100%;min-height:0;width:100%}
+
+/* ---------- SPLIT (skylights / railings) ---------- */
+.split .half{position:absolute;left:0;right:0;height:148.5mm}
+.split .h1{top:0}
+.split .h2{top:148.5mm;background:var(--paper);color:var(--ink)}
+.split .pic{position:absolute;top:0;bottom:0;width:88mm}
+.split .h1 .pic{right:0}
+.split .h2 .pic{left:0}
+.split .cnt{position:absolute;top:30mm;width:94mm}
+.split .h1 .cnt{left:16mm}
+.split .h2 .cnt{right:16mm;top:18mm}
+.split h2{font-size:36pt;font-weight:800;margin:2mm 0 4mm}
+.split .num{font-size:14pt;letter-spacing:.1em}
+.split .cnt p{font-size:9.6pt}
+.split .h2 .ben{border-color:var(--line)}.split .h2 .ben p{color:#50545B}.split .h2 .ben .n{color:var(--gold2)}.split .h2 .num{color:var(--gold2)}
+.split .h1 .cnt p{color:#C9CCD1}
+.rail-art{position:absolute;inset:0;background:linear-gradient(180deg,#26292E,#15171A);overflow:hidden}
+.rail-art .deck{position:absolute;left:0;right:0;bottom:0;height:34mm;background:#0F1012}
+.rail-art .handrail{position:absolute;left:10mm;right:-2mm;bottom:84mm;height:2.6mm;background:linear-gradient(90deg,#d9dde2,#8d939b);border-radius:1.3mm}
+.rail-art .pane{position:absolute;bottom:34mm;height:50mm;width:24mm;background:linear-gradient(135deg,rgba(190,231,247,.55),rgba(190,231,247,.18) 60%,rgba(255,255,255,.35));border:.3mm solid rgba(190,231,247,.6)}
+.rail-art .post{position:absolute;bottom:34mm;width:1.6mm;height:52mm;background:#b8bec6}
+.rail-art .sun{position:absolute;top:22mm;right:18mm;width:26mm;height:26mm;border-radius:50%;background:radial-gradient(circle,rgba(233,179,28,.9),rgba(233,179,28,0) 70%)}
+.rail-art .lbl{position:absolute;left:8mm;top:10mm;font-family:Saira;letter-spacing:.24em;font-size:8pt;color:#8d939b;text-transform:uppercase}
+
+/* ---------- PROCESS ---------- */
+.proc .top{position:absolute;top:30mm;left:16mm;right:16mm}
+.proc h2{font-size:42pt;font-weight:800;margin-top:4mm}
+.proc .top p{margin-top:5mm;max-width:150mm;color:#40444B}
+.steps{position:absolute;top:92mm;left:16mm;right:16mm}
+.step{display:grid;grid-template-columns:22mm 1fr 58mm;gap:6mm;align-items:start;padding:5.4mm 0;border-bottom:.25mm solid var(--line);position:relative}
+.step .sn{font-family:Saira;font-weight:800;font-size:30pt;line-height:.9;color:var(--gold)}
+.step h3{font-size:17pt;font-weight:700;margin-bottom:1.6mm}
+.step p{font-size:9.2pt;line-height:1.5;color:#50545B}
+.step .you{font-size:8.3pt;line-height:1.45;color:var(--mute);border-left:.8mm solid var(--gold);padding-left:3mm}
+.step .you b{display:block;font-family:Saira;letter-spacing:.16em;text-transform:uppercase;font-size:7.8pt;color:var(--gold2);margin-bottom:.8mm}
+
+/* ---------- GALLERY ---------- */
+.gal .top{position:absolute;top:30mm;left:16mm;right:16mm;display:flex;justify-content:space-between;align-items:flex-end}
+.gal h2{font-size:42pt;font-weight:800;margin-top:4mm}
+.gal .top p{width:70mm;color:#B9BDC4;font-size:9.4pt}
+.mosaic{position:absolute;top:80mm;left:16mm;right:16mm;bottom:28mm;display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr;gap:3.5mm}
+.mosaic div{position:relative;overflow:hidden;background:#222}
+.mosaic div span{position:absolute;left:0;bottom:0;background:rgba(15,16,18,.82);color:#fff;font-family:Saira;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:7.8pt;padding:1.6mm 3mm;border-left:1mm solid var(--gold)}
+.m1{grid-row:1/3}.m6{grid-column:2/4}
+
+/* ---------- COMPANY INFO ---------- */
+.info .top{position:absolute;top:30mm;left:16mm;right:16mm}
+.info h2{font-size:42pt;font-weight:800;margin-top:4mm}
+.info .top p{margin-top:5mm;max-width:150mm;color:#40444B}
+table{border-collapse:collapse;width:100%}
+.info table{position:absolute;top:78mm;left:16mm;width:178mm}
+.info td{border-bottom:.25mm solid var(--line);padding:3.3mm 0;font-size:9.6pt;vertical-align:top}
+.info td:first-child{width:52mm;font-family:Saira;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:9.5pt;color:var(--gold2);padding-top:3.6mm}
+.fill{display:inline-block;border:.35mm dashed var(--gold2);color:var(--gold2);background:rgba(233,179,28,.08);padding:.6mm 2.6mm;font-size:8.4pt;font-weight:600}
+.refs{position:absolute;left:16mm;right:16mm;top:200mm}
+.refs h3{font-size:18pt;font-weight:700;margin-bottom:4mm}
+.refgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}
+.ref{border:.35mm dashed #C7BFAE;height:15mm;display:flex;align-items:center;justify-content:center;font-size:8.2pt;color:#9A9384;font-weight:600;background:#fff}
+.docs{margin-top:5mm;font-size:8.6pt;color:var(--mute);line-height:1.5}
+
+/* ---------- BACK COVER ---------- */
+.back .grid{position:absolute;inset:0;background:
+ linear-gradient(90deg,rgba(233,179,28,.07) 1px,transparent 1px) 0 0/30mm 30mm,
+ linear-gradient(0deg,rgba(233,179,28,.07) 1px,transparent 1px) 0 0/30mm 30mm}
+.back .mark{position:absolute;right:-40mm;top:-20mm;width:170mm;opacity:.08}
+.back .cta{position:absolute;top:40mm;left:16mm;width:170mm}
+.back h2{font-size:54pt;font-weight:800;line-height:.9;margin:4mm 0 6mm}
+.back h2 span{color:var(--gold)}
+.back .cta p{color:#C9CCD1;font-size:11pt;max-width:130mm}
+.back .contact{position:absolute;top:140mm;left:16mm;right:16mm;display:grid;grid-template-columns:1fr 1fr;gap:0 10mm}
+.cblk{padding:6mm 0;border-top:.25mm solid #2d3036}
+.cblk .eyebrow{font-size:8.5pt;margin-bottom:2.5mm}
+.cblk .v{font-family:Saira;font-weight:600;font-size:19pt;line-height:1.25;letter-spacing:.01em}
+.cblk .v.sm{font-family:Manrope;font-weight:600;font-size:11pt;line-height:1.5}
+.back .qr{position:absolute;right:16mm;bottom:60mm;display:flex;align-items:center;gap:5mm}
+.back .qr .box{background:#fff;padding:2.5mm;width:34mm;height:34mm}
+.back .qr .box img{width:100%;height:100%}
+.back .qr .t{font-family:Saira;font-weight:700;text-transform:uppercase;font-size:13pt;line-height:1.05;text-align:right}
+.back .qr .t small{display:block;font-family:Manrope;text-transform:none;font-weight:500;font-size:8.5pt;color:#A7ABB2;margin-top:1.5mm}
+.back .logo{position:absolute;left:16mm;bottom:52mm;width:84mm}
+.back .band{position:absolute;left:0;right:0;bottom:0;height:22mm;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 16mm;font-family:Saira;font-weight:700;letter-spacing:.24em;text-transform:uppercase;font-size:9.5pt}
+
+/* ---------- SCREEN VIEW: centred pages with shadow (not printed) ---------- */
+@media screen{
+  html,body{background:#3a3d42}
+  body{padding:14mm 0}
+  .page{margin:0 auto 12mm;box-shadow:0 2px 6px rgba(0,0,0,.25),0 18px 48px rgba(0,0,0,.45)}
+  .page:last-child{margin-bottom:0}
+}
+@media print{
+  html,body{background:none}
+  .page{margin:0;box-shadow:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 01 COVER ============ -->
+<section class="page dark cover">
+  <div class="grid"></div>
+  <img class="logo" src="assets/logo.svg" alt="Al Heera Aluminium & Glass">
+  <div class="frame"><img class="ph" src="images/p01-1.jpg" alt=""><div class="shade"></div><div class="mull"></div></div>
+  <div class="title">
+    <div class="eyebrow">Company Profile</div>
+    <h1 style="margin-top:4mm">Aluminium &amp; Glass,<br><span>Built to Last.</span></h1>
+    <p class="sub">Windows, doors, facades, partitions, skylights, and railings for homes, businesses, and buildings across Ras Al Khaimah and the Northern Emirates.</p>
+  </div>
+  <div class="band">
+    <div class="disp">Ras Al Khaimah · UAE</div>
+    <small>Design · Fabrication<br>Installation</small>
+  </div>
+</section>
+
+<!-- ============ 02 ABOUT ============ -->
+<section class="page about">
+  <div class="hdr"><img src="assets/logo-dark.svg" alt=""><span></span></div>
+  <div class="img"><img class="ph" src="images/p02-1.jpg" alt=""></div>
+  <div class="txt">
+    <div class="eyebrow">01 — About Us</div>
+    <h2>Your Aluminium &amp; Glass Partner in RAK</h2>
+    <p class="lead">Al Heera Aluminium &amp; Glass supplies and installs high-quality aluminium and glass systems for residential, commercial, and industrial projects.</p>
+    <p style="margin-top:4mm">Based in Ras Al Khaimah, we combine skilled craftsmanship with modern design to deliver work that is durable, well finished, and suited to the local climate.</p>
+    <p>From the first consultation to the final installation, our team manages the whole job. You deal with one company, from start to finish.</p>
+  </div>
+  <div class="sect">
+    <div class="eyebrow">Who We Work With</div>
+    <div class="cols3">
+      <div class="card"><h3>Residential</h3><p>Villas, apartments, and home renovations — windows, doors, partitions, and balcony railings.</p></div>
+      <div class="card"><h3>Commercial</h3><p>Offices, shops, and showrooms — glass fronts, facades, and interior glass walls.</p></div>
+      <div class="card"><h3>Industrial</h3><p>Warehouses and facilities — durable aluminium systems built for heavy daily use.</p></div>
+    </div>
+  </div>
+  <div class="quote">
+    <div class="disp gold" style="min-width:62mm">One Team.<br>Start to Finish.</div>
+    <p>Consultation, design, fabrication, and installation — handled by the same team, so nothing is lost between stages.</p>
+  </div>
+  <div class="ftr"><span>Al Heera Aluminium &amp; Glass</span><b>02</b></div>
+</section>
+
+<!-- ============ 03 WHY ============ -->
+<section class="page dark why">
+  <div class="hdr"><img src="assets/logo.svg" alt=""><span></span></div>
+  <div class="top">
+    <div class="eyebrow">02 — Why Choose Al Heera</div>
+    <h2>Quality You Can See.<br><span class="gold">Service You Can Rely On.</span></h2>
+    <p class="intro">Aluminium and glass work is only as good as its materials, its measurements, and its installation. We take care of all three.</p>
+  </div>
+  <div class="list">
+    <div class="item"><div class="num">01</div><div><h3>Quality &amp; Precision</h3><p>High-grade aluminium profiles and properly processed glass, installed to recognised standards for durability and finish.</p></div></div>
+    <div class="item"><div class="num">02</div><div><h3>Local Expertise</h3><p>We know the heat, humidity, and dust of RAK and the Northern Emirates — and recommend systems that handle them efficiently.</p></div></div>
+    <div class="item"><div class="num">03</div><div><h3>Complete Service</h3><p>Consultation, custom design, fabrication, and installation, all managed by one team.</p></div></div>
+    <div class="item"><div class="num">04</div><div><h3>Attention to Detail</h3><p>Careful measuring, clean fitting, and a neat finish — on every window, door, and panel.</p></div></div>
+  </div>
+  <div class="side"><img class="ph" src="images/p03-1.jpg" alt=""><div class="cap"><div class="disp">Built for the<br>UAE Climate</div></div></div>
+  <div class="ftr"><span>Al Heera Aluminium &amp; Glass</span><b>03</b></div>
+</section>
+
+<!-- ============ 04 SERVICES OVERVIEW ============ -->
+<section class="page svc">
+  <div class="hdr"><img src="assets/logo-dark.svg" alt=""><span></span></div>
+  <div class="top">
+    <div><div class="eyebrow">03 — Our Services</div><h2>What We Do</h2></div>
+    <p>Five core service areas, each designed, made, and installed to suit your space and budget.</p>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="t-img"><img class="ph" src="images/p04-1.jpg" alt=""></div><div class="t-body"><div class="num">01</div><h3>Windows &amp; Doors</h3><p>Sliding, hinged, and folding aluminium systems for insulation, security, and smooth operation.</p></div></div>
+    <div class="tile"><div class="t-img"><img class="ph" src="images/p04-2.jpg" alt=""></div><div class="t-body"><div class="num">02</div><h3>Curtain Walls &amp; Facades</h3><p>Exterior glazing that protects from the weather, brings in daylight, and modernises the building.</p></div></div>
+    <div class="tile"><div class="t-img"><img class="ph" src="images/p04-3.jpg" alt=""></div><div class="t-body"><div class="num">03</div><h3>Glass Partitions</h3><p>Interior glass walls for offices and homes — open, bright spaces with sound separation.</p></div></div>
+    <div class="tile"><div class="t-img"><img class="ph" src="images/p04-4.jpg" alt=""></div><div class="t-body"><div class="num">04</div><h3>Skylights &amp; Canopies</h3><p>Custom overhead glass that brings natural light indoors while keeping the elements out.</p></div></div>
+    <div class="tile"><div class="t-img"><img class="ph" src="images/p04-5.svg" alt=""></div><div class="t-body"><div class="num">05</div><h3>Railings &amp; Balustrades</h3><p>Safe, stylish glass and aluminium railings for balconies, staircases, and terraces.</p></div></div>
+    <div class="tile wa"><h3>Not Sure What You Need?</h3><p>Send us a photo of your space on WhatsApp and our team will suggest the right solution.</p><div class="ph-no">+971 58 656 9334</div></div>
+  </div>
+  <div class="ftr"><span>Al Heera Aluminium &amp; Glass</span><b>04</b></div>
+</section>
+
+<!-- ============ 05 WINDOWS & DOORS ============ -->
+<section class="page sd">
+  <div class="hero"><img class="ph" src="images/p05-1.jpg" alt="" style="object-position:50% 40%"><div class="hdr"><img src="assets/logo.svg" alt=""><span>Services</span></div>
+    <div class="ttl"><div class="num">01</div><h2>Windows &amp; Doors</h2></div></div>
+  <div class="body">
+    <div>
+      <p class="lead">Custom aluminium and glass windows and doors, made to measure for your openings.</p>
+      <p>Well-made windows and doors keep heat, dust, and noise out — and keep your home or business secure. We design each system around how the space is used, then fabricate and install it with a clean, lasting finish.</p>
+      <h4>Opening Styles</h4>
+      <div class="types">
+        <div class="type"><b>Sliding</b><span>Saves space. Ideal for wide openings and balconies.</span></div>
+        <div class="type"><b>Hinged</b><span>Classic opening with a tight, secure seal.</span></div>
+        <div class="type"><b>Folding</b><span>Opens a whole wall to terraces or gardens.</span></div>
+      </div>
+      <h4>Ideal For</h4>
+      <div class="chips"><span class="chip">Villas</span><span class="chip">Apartments</span><span class="chip">Shops</span><span class="chip">Offices</span></div>
+    </div>
+    <div>
+      <h4 style="margin-top:0">What You Get</h4>
+      <div class="ben"><div class="n">01</div><div><h5>Better Insulation</h5><p>Helps keep interiors cooler and quieter, easing the load on air conditioning.</p></div></div>
+      <div class="ben"><div class="n">02</div><div><h5>Security</h5><p>Strong frames and reliable locking for peace of mind.</p></div></div>
+      <div class="ben"><div class="n">03</div><div><h5>Smooth Operation</h5><p>Easy to open and close, day after day.</p></div></div>
+      <div class="ben" style="border:0"><div class="n">04</div><div><h5>Made to Measure</h5><p>Sized and finished to match your space and style.</p></div></div>
+    </div>
+  </div>
+  <div class="strip" style="grid-template-columns:1fr 1fr;height:36mm"><img class="ph" src="images/p05-2.jpg" alt=""><img class="ph" src="images/p05-3.jpg" alt=""></div>
+  <div class="ftr"><span>Al Heera Aluminium &amp; Glass</span><b>05</b></div>
+</section>
+
+<!-- ============ 06 CURTAIN WALLS ============ -->
+<section class="page dark sd">
+  <div class="hero"><img class="ph" src="images/p06-1.jpg" alt=""><div class="hdr"><img src="assets/logo.svg" alt=""><span>Services</span></div>
+    <div class="ttl"><div class="num">02</div><h2>Curtain Walls<br>&amp; Facades</h2></div></div>
+  <div class="body">
+    <div>
+      <p class="lead">Strong exterior glazing that gives your building a clean, modern face.</p>
+      <p style="color:#C9CCD1">A facade is the first thing people see. Our curtain wall and facade systems protect the building from the weather, fill interiors with natural light, and give commercial and residential properties a sharp, professional look.</p>
+      <h4>Ideal For</h4>
+      <div class="chips"><span class="chip">Commercial buildings</span><span class="chip">Showrooms</span><span class="chip">Office fronts</span><span class="chip">Villa elevations</span><span class="chip">Retail frontage</span></div>
+    </div>
+    <div>
+      <h4 style="margin-top:0">What You Get</h4>
+      <div class="ben"><div class="n">01</div><div><h5>Weather Resistance</h5><p>Robust systems designed to handle UAE heat, wind, and dust.</p></div></div>
+      <div class="ben"><div class="n">02</div><div><h5>More Natural Light</h5><p>Bright interiors that feel open and welcoming.</p></div></div>
+      <div class="ben"><div class="n">03</div><div><h5>A Stronger First Impression</h5><p>A modern exterior that lifts the image and value of the property.</p></div></div>
+    </div>
+  </div>
+  <div class="strip" style="grid-template-columns:1fr 1.4fr;height:44mm"><img class="ph" src="images/p06-2.jpg" alt=""><img class="ph" src="images/p06-3.jpg" alt="" style="object-position:50% 60%"></div>
+  <div class="ftr"><span>Al Heera Aluminium &amp; Glass</span><b>06</b></div>
+</section>
+
+<!-- ============ 07 PARTITIONS ============ -->
+<section class="page sd">
+  <div class="hero"><img class="ph" src="images/p07-1.jpg" alt=""><div class="hdr"><img src="assets/logo.svg" alt=""><span>Services</span></div>
+    <div class="ttl"><div class="num">03</div><h2>Glass Partitions</h2></div></div>
+  <div class="body">
+    <div>
+      <p class="lead">Elegant interior glass walls that divide space without closing it off.</p>
+      <p>Glass partitions let light travel through the whole space while giving each area its own purpose. They suit modern offices and homes alike — and can be clear, frosted, or patterned depending on how much privacy you need.</p>
+      <h4>Ideal For</h4>
+      <div class="chips"><span class="chip">Offices</span><span class="chip">Meeting rooms</span><span class="chip">Clinics</span><span class="chip">Homes</span><span class="chip">Showrooms</span></div>
+    </div>
+    <div>
+      <h4 style="margin-top:0">What You Get</h4>
+      <div class="ben"><div class="n">01</div><div><h5>Open, Bright Spaces</h5><p>Daylight reaches every corner, so rooms feel larger.</p></div></div>
+      <div class="ben"><div class="n">02</div><div><h5>Sound Separation</h5><p>Quieter rooms for calls, meetings, and focused work.</p></div></div>
+      <div class="ben"><div class="n">03</div><div><h5>Privacy Your Way</h5><p>Choose clear, frosted, or patterned glass to suit each room.</p></div></div>
+    </div>
+  </div>
+  <div class="strip" style="grid-template-columns:repeat(3,1fr);height:38mm"><img class="ph" src="images/p07-2.jpg" alt=""><img class="ph" src="images/p07-3.jpg" alt=""><img class="ph" src="images/p07-4.jpg" alt=""></div>
+  <div class="ftr"><span>Al Heera Aluminium &amp; Glass</span><b>07</b></div>
+</section>
+
+<!-- ============ 08 SKYLIGHTS + RAILINGS ============ -->
+<section class="page dark split">
+  <div class="half h1">
+    <div class="pic"><img class="ph" src="images/p08-1.jpg" alt=""></div>
+    <div class="hdr" style="right:104mm"><img src="assets/logo.svg" alt=""><span>Services</span></div>
+    <div class="cnt">
+      <div class="num">04</div>
+      <h2>Skylights &amp;<br>Canopies</h2>
+      <p>Bespoke overhead glass structures that bring daylight into your property while protecting it from sun, rain, and dust.</p>
+      <h4 class="eyebrow" style="margin:6mm 0 3mm;font-size:9pt">Ideal For</h4>
+      <div class="chips"><span class="chip">Villa courtyards</span><span class="chip">Stairwells</span><span class="chip">Entrances</span><span class="chip">Sunrooms</span></div>
+    </div>
+  </div>
+  <div class="half h2">
+    <div class="pic"><img class="ph" src="images/p08-2.svg" alt=""></div>
+    <div class="cnt">
+      <div class="num">05</div>
+      <h2>Railings &amp;<br>Balustrades</h2>
+      <p style="color:#40444B">Safe, stylish glass and aluminium railings for balconies, staircases, and terraces — strong enough for daily use, clean enough to keep the view open.</p>
+      <div class="ben" style="margin-top:3mm"><div class="n">01</div><div><h5>Safety First</h5><p>Secure fixing and sturdy handrails for families and visitors.</p></div></div>
+      <div class="ben" style="border:0"><div class="n">02</div><div><h5>Uninterrupted Views</h5><p>Glass panels keep balconies and stairs feeling open.</p></div></div>
+    </div>
+    <div class="ftr" style="bottom:11mm"><span>Al Heera Aluminium &amp; Glass</span><b>08</b></div>
+  </div>
+</section>
+
+<!-- ============ 09 PROCESS ============ -->
+<section class="page proc">
+  <div class="hdr"><img src="assets/logo-dark.svg" alt=""><span></span></div>
+  <div class="top">
+    <div class="eyebrow">04 — How We Work</div>
+    <h2>A Clear Process,<br><span class="gold2">From Enquiry to Installation</span></h2>
+    <p>Every project follows the same simple steps, so you always know what happens next.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="sn">01</div><div><h3>Consultation</h3><p>Tell us what you need — by call, WhatsApp, or a visit to our office. We listen and suggest suitable options.</p></div><div class="you"><b>You share</b>Your requirement, photos, or drawings</div></div>
+    <div class="step"><div class="sn">02</div><div><h3>Site Visit &amp; Measurement</h3><p>Our team visits the site and takes accurate measurements, so everything fits the first time.</p></div><div class="you"><b>We confirm</b>Sizes and site conditions</div></div>
+    <div class="step"><div class="sn">03</div><div><h3>Design &amp; Quotation</h3><p>We recommend the right system, finish, and glass, and give you a clear quotation.</p></div><div class="you"><b>You approve</b>Design, finish, and price</div></div>
+    <div class="step"><div class="sn">04</div><div><h3>Fabrication</h3><p>Aluminium profiles are cut, assembled, and glazed to your approved design.</p></div><div class="you"><b>We build</b>Your system, made to measure</div></div>
+    <div class="step"><div class="sn">05</div><div><h3>Installation</h3><p>Our installers fit, seal, and finish the work neatly, with care for your property.</p></div><div class="you"><b>We install</b>Cleanly and professionally</div></div>
+    <div class="step" style="border:0"><div class="sn">06</div><div><h3>Handover</h3><p>We check every detail with you before we call the job complete.</p></div><div class="you"><b>You receive</b>A finished, inspected job</div></div>
+  </div>
+  <div class="ftr"><span>Al Heera Aluminium &amp; Glass</span><b>09</b></div>
+</section>
+
+<!-- ============ 10 GALLERY ============ -->
+<section class="page dark gal">
+  <div class="hdr"><img src="assets/logo.svg" alt=""><span></span></div>
+  <div class="top">
+    <div><div class="eyebrow">05 — Gallery</div><h2>Spaces We<br><span class="gold">Help Create</span></h2></div>
+    <p>Aluminium and glass solutions for villas, homes, offices, and commercial buildings.</p>
+  </div>
+  <div class="mosaic">
+    <div class="m1"><img class="ph" src="images/p10-1.jpg" alt=""><span>Facades</span></div>
+    <div><img class="ph" src="images/p10-2.jpg" alt=""><span>Doors</span></div>
+    <div><img class="ph" src="images/p10-3.jpg" alt=""><span>Villa Windows</span></div>
+    <div><img class="ph" src="images/p10-4.jpg" alt=""><span>Partitions</span></div>
+    <div><img class="ph" src="images/p10-5.jpg" alt=""><span>Curtain Walls</span></div>
+    <div><img class="ph" src="images/p10-6.jpg" alt=""><span>Skylights</span></div>
+    <div class="m6"><img class="ph" src="images/p10-7.jpg" alt="" style="object-position:50% 55%"><span>Sliding Systems</span></div>
+  </div>
+  <div class="ftr"><span>Al Heera Aluminium &amp; Glass</span><b>10</b></div>
+</section>
+
+<!-- ============ 11 COMPANY INFO ============ -->
+<section class="page info">
+  <div class="hdr"><img src="assets/logo-dark.svg" alt=""><span></span></div>
+  <div class="top">
+    <div class="eyebrow">06 — Company Information</div>
+    <h2>At a Glance</h2>
+    <p>Key details for clients, contractors, and consultants.</p>
+  </div>
+  <table>
+    <tr><td>Company</td><td>Al Heera Aluminium &amp; Glass</td></tr>
+    <tr><td>Location</td><td>Airport Road, Opp. ADIB Bank, Digdaga, Ras Al Khaimah, UAE</td></tr>
+    <tr><td>Services</td><td>Windows &amp; doors, curtain walls &amp; facades, glass partitions, skylights &amp; canopies, railings &amp; balustrades</td></tr>
+    <tr><td>Sectors</td><td>Residential, commercial, and industrial</td></tr>
+    <tr><td>Service Area</td><td>Ras Al Khaimah and the Northern Emirates</td></tr>
+    <tr><td>Established</td><td><span class="fill">Year to be added</span></td></tr>
+    <tr><td>Trade Licence No.</td><td><span class="fill">Licence number to be added</span></td></tr>
+    <tr><td>Contact</td><td>+971 58 656 9334 · +971 54 799 6617 · +971 50 942 7363<br>alheeraaluminium@gmail.com</td></tr>
+  </table>
+  <div class="refs">
+    <h3>Clients &amp; Project References</h3>
+    <div class="refgrid">
+      <div class="ref">Client / Project name</div><div class="ref">Client / Project name</div><div class="ref">Client / Project name</div>
+      <div class="ref">Client / Project name</div><div class="ref">Client / Project name</div><div class="ref">Client / Project name</div>
+    </div>
+    <p class="docs">Trade licence, VAT certificate, and project completion references available on request.</p>
+  </div>
+  <div class="ftr"><span>Al Heera Aluminium &amp; Glass</span><b>11</b></div>
+</section>
+
+<!-- ============ 12 BACK COVER ============ -->
+<section class="page dark back">
+  <div class="grid"></div>
+  <img class="mark" src="assets/mark.svg" alt="">
+  <div class="cta">
+    <div class="eyebrow">Get in Touch</div>
+    <h2>Let's Talk About<br><span>Your Project.</span></h2>
+    <p>Call, WhatsApp, or visit us. Tell us what you have in mind and our team will guide you to the right solution.</p>
+  </div>
+  <div class="contact">
+    <div class="cblk"><div class="eyebrow">Call / WhatsApp</div><div class="v">+971 58 656 9334<br>+971 54 799 6617<br>+971 50 942 7363</div></div>
+    <div class="cblk"><div class="eyebrow">Email</div><div class="v sm">alheeraaluminium@gmail.com</div>
+      <div class="eyebrow" style="margin-top:6mm">Visit Us</div><div class="v sm">Airport Road, Opp. ADIB Bank<br>Digdaga, Ras Al Khaimah, UAE</div></div>
+  </div>
+  <img class="logo" src="assets/logo.svg" alt="">
+  <div class="qr"><div class="t">Scan to<br>WhatsApp Us<small>Opens a chat with our team</small></div><div class="box"><img src="assets/qr.svg" alt=""></div></div>
+  <div class="band"><span>Windows · Doors · Facades · Partitions · Skylights · Railings</span><span>RAK · UAE</span></div>
+</section>
+
+</body>
+</html>
